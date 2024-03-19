@@ -21,7 +21,11 @@ export default function Header() {
           <div className=" max-w-4xl  flex justify-evenly gap-10  ">
             {navigation.map((item) => {
               return (
-                <a key={item.name} className="button" href={item.href}>
+                <a
+                  key={item.name}
+                  className="button text-slate-500"
+                  href={item.href}
+                >
                   {item.name}
                 </a>
               );
@@ -50,7 +54,7 @@ export default function Header() {
           )}
         </div>
         {openMenu ? (
-          <div className="flex justify-center items-center text-blue-50  flex-col">
+          <div className="flex justify-center items-center text-blue-50  flex-col ">
             {/* <img src={logoIcon} alt="Logo" className="w-10 h-10" /> */}
             {navigation.map((item) => {
               return (

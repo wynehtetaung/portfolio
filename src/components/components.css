@@ -8,6 +8,23 @@
     4px 4px 6px rgba(0, 0, 0, 0.288);
   color: #fff;
 }
+
+.profile {
+  box-shadow: -3px -4px 8px rgba(157, 169, 149, 0.2),
+    4px 4px 6px rgba(0, 0, 0, 0.288);
+}
+.about-image {
+  width: 40%;
+  box-shadow: -3px -4px 8px rgba(157, 169, 149, 0.2),
+    4px 4px 6px rgba(0, 0, 0, 0.288);
+}
+.about-text {
+  width: 40%;
+}
+.card {
+  box-shadow: -3px -4px 8px rgba(157, 169, 149, 0.2),
+    4px 4px 6px rgba(0, 0, 0, 0.288);
+}
 /* 
 .item1 {
   margin: 5px 0;

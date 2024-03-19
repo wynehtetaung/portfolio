@@ -5,7 +5,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="background">
-      <div className="box">
+      <div className="box ">
         <Header />
         <Body />
       </div>
