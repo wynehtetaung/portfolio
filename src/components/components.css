@@ -1,0 +1,49 @@
+.button {
+  width: 100px;
+  height: 40px;
+  padding: 7px 10px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.2),
+    4px 4px 6px rgba(0, 0, 0, 0.288);
+  color: #fff;
+}
+/* 
+.item1 {
+  margin: 5px 0;
+  transform-origin: top center;
+  animation: translateX 300ms 60s ease-in-out forwards;
+}
+.item2 {
+  margin: 5px 0;
+  transform-origin: top center;
+  animation: translateX 300ms 120s ease-in-out forwards;
+}
+.item3 {
+  margin: 5px 0;
+  transform-origin: top center;
+  animation: translateX 300ms 180s ease-in-out forwards;
+}
+.item4 {
+  margin: 5px 0;
+  transform-origin: top center;
+  animation: translateX 300ms 240s ease-in-out forwards;
+}
+.item5 {
+  margin: 5px 0;
+  transform-origin: top center;
+  animation: translateX 300ms 300s ease-in-out forwards;
+}
+
+@keyframes translateX {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    background-color: red;
+  }
+} */
