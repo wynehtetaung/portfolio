@@ -302,60 +302,116 @@ export default function Body() {
           <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
             <div className="w-3/4 h-2 bg-indigo-500 rounded-full "></div>
           </div>
-          <div className="flex w-1/3 mx-auto justify-around my-10">
-            <div className="button w-36">Experience</div>
-            <div className="button w-36">Education</div>
+          <div className="ssm:hidden sm:hidden md:hidden lg:block">
+            <div className="flex w-1/3 mx-auto justify-between my-10">
+              <div className="button w-36">Experience</div>
+              <div className="button w-36">Education</div>
+            </div>
+            <div className="flex justify-evenly md:gap-5 ssm:g-0">
+              <div className="w-full  relative">
+                <div
+                  className="box w-3/6 p-5 absolute left-44"
+                  style={{ top: "19%" }}
+                >
+                  <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                  <p className="text-slate-500 font-light tracking-wide">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel commodi impedit corrupti. Ad hic magni tenetur nulla
+                    nesciunt mollitia repellendus iste inventore reprehenderit,
+                    minus enim minima quae dignissimos qui at. Ad hic magni
+                    tenetur nulla nesciunt mollitia repellendus iste inventore
+                    reprehenderit, minus enim minima quae dignissimos qui at.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="w-1 rounded-full bg-slate-600 relative"
+                  style={{ height: "140vh" }}
+                >
+                  <div
+                    className="w-24 h-24 rounded-full absolute"
+                    style={{ left: -43, top: "30%" }}
+                  >
+                    <img src={expIcon} />
+                  </div>
+                  <div
+                    className="w-24 h-24 rounded-full absolute"
+                    style={{ left: -43, top: "70%" }}
+                  >
+                    <img src={expIcon} />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full relative">
+                <div
+                  className="box w-3/6 p-5 absolute left-44"
+                  style={{ top: "60%" }}
+                >
+                  <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                  <p className="text-slate-500 font-light tracking-wide">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel commodi impedit corrupti. Ad hic magni tenetur nulla
+                    nesciunt mollitia repellendus iste inventore reprehenderit,
+                    minus enim minima quae dignissimos qui at.Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Vel commodi impedit
+                    corrupti. Ad hic magni tenetur nulla nesciunt mollitia.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-evenly md:gap-5 ssm:g-0">
-            <div className="w-full  relative">
-              <div
-                className="box w-3/6 p-5 absolute left-44"
-                style={{ top: "19%" }}
-              >
-                <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
-                <p className="text-slate-500 font-light tracking-wide">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-                  commodi impedit corrupti. Ad hic magni tenetur nulla nesciunt
-                  mollitia repellendus iste inventore reprehenderit, minus enim
-                  minima quae dignissimos qui at. Ad hic magni tenetur nulla
-                  nesciunt mollitia repellendus iste inventore reprehenderit,
-                  minus enim minima quae dignissimos qui at.
-                </p>
-              </div>
+          <div className="ssm:block sm:block md:block lg:hidden">
+            <div className="flex w-1/3 mx-auto justify-between my-10">
+              <div className="button w-36">Experience</div>
+              <div className="button w-36">Education</div>
             </div>
-            <div>
-              <div
-                className="w-1 rounded-full bg-slate-600 relative"
-                style={{ height: "140vh" }}
-              >
+            <div className="relative">
+              <div className="ms-10 inline">
                 <div
-                  className="w-24 h-24 rounded-full absolute"
-                  style={{ left: -43, top: "30%" }}
+                  className="w-1 rounded-full bg-slate-600 relative"
+                  style={{ height: "100vh" }}
                 >
-                  <img src={expIcon} />
-                </div>
-                <div
-                  className="w-24 h-24 rounded-full absolute"
-                  style={{ left: -43, top: "70%" }}
-                >
-                  <img src={expIcon} />
+                  <div
+                    className="w-24 h-24 rounded-full absolute"
+                    style={{ left: -43, top: "20%" }}
+                  >
+                    <img src={expIcon} />
+                  </div>
+                  <div
+                    className="w-24 h-24 rounded-full absolute"
+                    style={{ left: -43, top: "60%" }}
+                  >
+                    <img src={expIcon} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full relative">
-              <div
-                className="box w-3/6 p-5 absolute left-44"
-                style={{ top: "60%" }}
-              >
-                <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
-                <p className="text-slate-500 font-light tracking-wide">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-                  commodi impedit corrupti. Ad hic magni tenetur nulla nesciunt
-                  mollitia repellendus iste inventore reprehenderit, minus enim
-                  minima quae dignissimos qui at.Lorem ipsum dolor sit, amet
-                  consectetur adipisicing elit. Vel commodi impedit corrupti. Ad
-                  hic magni tenetur nulla nesciunt mollitia.
-                </p>
+
+              <div className="w-full absolute left-5" style={{ top: "15%" }}>
+                <div className="box w-10/12 p-5">
+                  <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                  <p className="text-slate-500 font-light tracking-wide">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel commodi impedit corrupti. Ad hic magni tenetur nulla
+                    nesciunt mollitia repellendus iste inventore reprehenderit,
+                    minus enim minima quae dignissimos qui at. Ad hic magni
+                    tenetur nulla nesciunt mollitia repellendus iste inventore
+                    reprehenderit, minus enim minima quae dignissimos qui at.
+                  </p>
+                </div>
+              </div>
+              <div className="w-full absolute left-5" style={{ top: "55%" }}>
+                <div className="box w-10/12 p-5">
+                  <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                  <p className="text-slate-500 font-light tracking-wide">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vel commodi impedit corrupti. Ad hic magni tenetur nulla
+                    nesciunt mollitia repellendus iste inventore reprehenderit,
+                    minus enim minima quae dignissimos qui at.Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Vel commodi impedit
+                    corrupti. Ad hic magni tenetur nulla nesciunt mollitia.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
