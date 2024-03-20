@@ -158,21 +158,23 @@ export default function Body() {
               return (
                 <div
                   key={project.id}
-                  className="card rounded-md bg-slate-500 hover:animate-pulse cursor-pointer"
+                  className="card  rounded-md hover:animate-pulse cursor-pointer  bg-slate-500 "
                 >
-                  <img
-                    src={project.image}
-                    alt="project image"
-                    className="rounded-t-md w-60 h-52 object-cover object-center"
-                  />
-                  <p className="text-sm font-medium text-gray-50 text-center py-3 font-sans">
-                    {project.title}
-                  </p>
-                  <a target="_blank" href={project.code}>
-                    <p className="w-3/5 mx-auto rounded text-xs pb-2 font-light text-gray-50 text-center py-1 font-sans">
-                      {"{"} show code {"}"}
+                  <div className="item">
+                    <img
+                      src={project.image}
+                      alt="project image"
+                      className="rounded-t-md w-60 h-52 object-cover object-center "
+                    />
+                    <p className="text-sm  font-medium text-gray-50 text-center py-3 font-sans">
+                      {project.title}
                     </p>
-                  </a>
+                    <a target="_blank" href={project.code}>
+                      <p className="w-3/5  mx-auto rounded text-xs pb-2 font-light text-gray-50 text-center py-1 font-sans">
+                        {"{"} show code {"}"}
+                      </p>
+                    </a>
+                  </div>
                 </div>
               );
             })}
