@@ -44,7 +44,7 @@
   width: 130%;
   height: 300%;
   top: 90px;
-  background: linear-gradient(#56a1ed, #acb6e5);
+  background: linear-gradient(#16f1db, #acb6e5);
   animation: rotate 4s linear infinite;
 }
 .card::after {
@@ -55,7 +55,7 @@
   border-radius: 5px;
 }
 .glow {
-  background: #74ebd5; /* fallback for old browsers */
+  background: #74ebd5; /*for old browsers */
   background: -webkit-linear-gradient(
     to left,
     #acb6e5,
@@ -69,8 +69,21 @@
 
   box-shadow: 0px 0px 5px #acb6e5;
 }
-.circle {
-  box-shadow: 0px 0px 5px #acb6e5;
+
+.swiper {
+  width: 500px;
+  height: auto;
+}
+
+.box {
+  box-shadow: -5px -5px 8px rgba(157, 169, 149, 0.2),
+    5px 5px 10px rgba(0, 0, 0, 0.288);
+}
+
+@media only screen and (max-width: 650px) {
+  .swiper {
+    width: 350px;
+  }
 }
 
 @keyframes rotate {
@@ -81,43 +94,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* 
-.item1 {
-  margin: 5px 0;
-  transform-origin: top center;
-  animation: translateX 300ms 60s ease-in-out forwards;
-}
-.item2 {
-  margin: 5px 0;
-  transform-origin: top center;
-  animation: translateX 300ms 120s ease-in-out forwards;
-}
-.item3 {
-  margin: 5px 0;
-  transform-origin: top center;
-  animation: translateX 300ms 180s ease-in-out forwards;
-}
-.item4 {
-  margin: 5px 0;
-  transform-origin: top center;
-  animation: translateX 300ms 240s ease-in-out forwards;
-}
-.item5 {
-  margin: 5px 0;
-  transform-origin: top center;
-  animation: translateX 300ms 300s ease-in-out forwards;
-}
-
-@keyframes translateX {
-  0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    background-color: red;
-  }
-} */

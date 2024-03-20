@@ -2,9 +2,17 @@ import "./components.css";
 import profileImage from "../assets/profile.jpg";
 import web1 from "../assets/download.jpeg";
 import web2 from "../assets/download (1).jpeg";
+import ctf from "../assets/ctf.png";
+import expIcon from "../assets/expIcon.svg";
 import { useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import { EffectCards } from "swiper/modules";
 
 const projectsTitle = [
   { id: 0, name: "All" },
@@ -42,6 +50,12 @@ const proSkills = [
   { id: 2, skill: "Communication", percent: 50 },
   { id: 3, skill: "Creativity", percent: 45 },
   { id: 4, skill: "Project Management", percent: 50 },
+];
+const certificates = [
+  { id: 1, image: ctf },
+  { id: 2, image: ctf },
+  { id: 3, image: ctf },
+  { id: 4, image: ctf },
 ];
 
 export default function Body() {
@@ -187,77 +201,164 @@ export default function Body() {
           <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
             <div className="w-3/4 h-2 bg-indigo-500 rounded-full "></div>
           </div>
-        </div>
-        <div className="flex gap-4 justify-center pt-10 ssm:flex-wrap">
-          <div
-            className="button w-40"
-            onClick={() => {
-              setLanguage(true);
-              setProSkill(false);
-            }}
-          >
-            Language Skill
+          <div className="flex gap-4 justify-center pt-10 ssm:flex-wrap">
+            <div
+              className="button w-40"
+              onClick={() => {
+                setLanguage(true);
+                setProSkill(false);
+              }}
+            >
+              Language Skill
+            </div>
+            <div
+              className="button w-40"
+              onClick={() => {
+                setLanguage(false);
+                setProSkill(true);
+              }}
+            >
+              Professional Skill
+            </div>
           </div>
-          <div
-            className="button w-40"
-            onClick={() => {
-              setLanguage(false);
-              setProSkill(true);
-            }}
-          >
-            Professional Skill
-          </div>
-        </div>
-        <div className="flex w-3/6 mx-auto">
-          {language && (
-            <div className="flex flex-col gap-6 w-full py-10">
-              {languageSkills.map((skill) => {
-                return (
-                  <div key={skill.id}>
-                    <span className="text-slate-500 font-sans mb-1">
-                      {skill.language}
-                    </span>
-                    <div className="w-full h-3 bg-slate-500 rounded-full">
-                      <div
-                        className="h-3 glow relative rounded-full"
-                        style={{ width: skill.percent }}
-                      >
-                        <span className="text-xs text-inherit absolute left-2/4">
-                          {skill.percent}
-                        </span>
+          <div className="flex w-3/6 mx-auto">
+            {language && (
+              <div className="flex flex-col gap-6 w-full py-10">
+                {languageSkills.map((skill) => {
+                  return (
+                    <div key={skill.id}>
+                      <span className="text-slate-500 font-sans mb-1">
+                        {skill.language}
+                      </span>
+                      <div className="w-full h-3 bg-slate-500 rounded-full">
+                        <div
+                          className="h-3 glow relative rounded-full"
+                          style={{ width: skill.percent }}
+                        >
+                          <span className="text-xs text-inherit absolute left-2/4">
+                            {skill.percent}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
+                  );
+                })}
+              </div>
+            )}
 
-          {proSkill && (
-            <div className="flex justify-center gap-9 mt-24 mb-9 flex-wrap">
-              {proSkills.map((skill) => {
-                return (
-                  <div key={skill.id} className="w-2/6">
-                    <CircularProgressbar
-                      className="mb-5"
-                      value={skill.percent}
-                      maxValue={100}
-                      strokeWidth={4}
-                      text={`${skill.percent}%`}
-                      styles={buildStyles({
-                        pathColor: "#acb6e5",
-                        textColor: "#64748b",
-                        trailColor: "transparent",
-                      })}
-                    />
-                    <span className="text-slate-500 text-center ssm:text-sm lg:text-2xl font-extralight">
-                      {skill.skill}
-                    </span>
-                  </div>
-                );
-              })}
+            {proSkill && (
+              <div className="flex justify-center gap-9 mt-24 mb-9 flex-wrap">
+                {proSkills.map((skill) => {
+                  return (
+                    <div key={skill.id} className="w-2/6">
+                      <CircularProgressbar
+                        className="mb-5"
+                        value={skill.percent}
+                        maxValue={100}
+                        strokeWidth={4}
+                        text={`${skill.percent}%`}
+                        styles={buildStyles({
+                          pathColor: "#acb6e5",
+                          textColor: "#64748b",
+                          trailColor: "transparent",
+                        })}
+                      />
+                      <span className="text-slate-500 text-center ssm:text-sm lg:text-2xl font-extralight">
+                        {skill.skill}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+        <div id="Certifications">
+          <p className="text-3xl  text-slate-500 w-4/5 mx-auto mb-4">
+            Certifications
+          </p>
+          <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
+            <div className="w-3/4 h-2 bg-indigo-500 rounded-full "></div>
+          </div>
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper mt-10"
+          >
+            {certificates.map((certificate) => {
+              return (
+                <SwiperSlide key={certificate.id} className="rounded-xl">
+                  <img src={certificate.image} alt="Certificate image" />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <div id="experience">
+          <p className="text-3xl text-end text-slate-500 w-4/5 mx-auto mb-4">
+            Experience
+          </p>
+          <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
+            <div className="w-3/4 h-2 bg-indigo-500 rounded-full "></div>
+          </div>
+          <div className="flex w-1/3 mx-auto justify-around my-10">
+            <div className="button w-36">Experience</div>
+            <div className="button w-36">Education</div>
+          </div>
+          <div className="flex justify-evenly md:gap-5 ssm:g-0">
+            <div className="w-full  relative">
+              <div
+                className="box w-3/6 p-5 absolute left-44"
+                style={{ top: "19%" }}
+              >
+                <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                <p className="text-slate-500 font-light tracking-wide">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+                  commodi impedit corrupti. Ad hic magni tenetur nulla nesciunt
+                  mollitia repellendus iste inventore reprehenderit, minus enim
+                  minima quae dignissimos qui at. Ad hic magni tenetur nulla
+                  nesciunt mollitia repellendus iste inventore reprehenderit,
+                  minus enim minima quae dignissimos qui at.
+                </p>
+              </div>
             </div>
-          )}
+            <div>
+              <div
+                className="w-1 rounded-full bg-slate-600 relative"
+                style={{ height: "140vh" }}
+              >
+                <div
+                  className="w-24 h-24 rounded-full absolute"
+                  style={{ left: -43, top: "30%" }}
+                >
+                  <img src={expIcon} />
+                </div>
+                <div
+                  className="w-24 h-24 rounded-full absolute"
+                  style={{ left: -43, top: "70%" }}
+                >
+                  <img src={expIcon} />
+                </div>
+              </div>
+            </div>
+            <div className="w-full relative">
+              <div
+                className="box w-3/6 p-5 absolute left-44"
+                style={{ top: "60%" }}
+              >
+                <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
+                <p className="text-slate-500 font-light tracking-wide">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+                  commodi impedit corrupti. Ad hic magni tenetur nulla nesciunt
+                  mollitia repellendus iste inventore reprehenderit, minus enim
+                  minima quae dignissimos qui at.Lorem ipsum dolor sit, amet
+                  consectetur adipisicing elit. Vel commodi impedit corrupti. Ad
+                  hic magni tenetur nulla nesciunt mollitia.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
