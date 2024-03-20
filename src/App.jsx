@@ -4,8 +4,8 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="background">
-      <div className="box ">
+    <div className="background py-8">
+      <div className="box">
         <Header />
         <Body />
       </div>

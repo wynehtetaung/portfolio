@@ -79,10 +79,32 @@
   box-shadow: -5px -5px 8px rgba(157, 169, 149, 0.2),
     5px 5px 10px rgba(0, 0, 0, 0.288);
 }
-
+.contact-box {
+  box-shadow: -5px -5px 18px rgba(157, 169, 149, 0.2),
+    5px 5px 8px rgba(56, 58, 56, 0.2);
+}
+.input-box {
+  background-color: #232732;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.288),
+    inset -4px -4px 4px rgba(0, 0, 0, 0.288);
+  border-radius: 5px;
+  outline: none;
+  resize: both;
+}
+.height {
+  height: 70vh;
+}
 @media only screen and (max-width: 650px) {
   .swiper {
     width: 350px;
+  }
+  .height {
+    height: 30vh;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .height {
+    height: 20vh;
   }
 }
 

@@ -4,6 +4,7 @@ import web1 from "../assets/download.jpeg";
 import web2 from "../assets/download (1).jpeg";
 import ctf from "../assets/ctf.png";
 import expIcon from "../assets/expIcon.svg";
+import contact from "../assets/contact.png";
 import { useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -275,7 +276,7 @@ export default function Body() {
           </div>
         </div>
         <div id="Certifications">
-          <p className="text-3xl  text-slate-500 w-4/5 mx-auto mb-4">
+          <p className="text-3xl mt-5 text-slate-500 w-4/5 mx-auto mb-4">
             Certifications
           </p>
           <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
@@ -297,7 +298,7 @@ export default function Body() {
           </Swiper>
         </div>
         <div id="experience">
-          <p className="text-3xl text-end text-slate-500 w-4/5 mx-auto mb-4">
+          <p className="text-3xl mt-8 text-end text-slate-500 w-4/5 mx-auto mb-4">
             Experience
           </p>
           <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
@@ -309,9 +310,9 @@ export default function Body() {
               <div className="button w-36">Education</div>
             </div>
             <div className="flex justify-evenly md:gap-5 ssm:g-0">
-              <div className="w-full  relative">
+              <div className="w-full relative">
                 <div
-                  className="box w-3/6 p-5 absolute left-44"
+                  className="box w-4/6 p-5 absolute left-20"
                   style={{ top: "19%" }}
                 >
                   <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
@@ -346,7 +347,7 @@ export default function Body() {
               </div>
               <div className="w-full relative">
                 <div
-                  className="box w-3/6 p-5 absolute left-44"
+                  className="box w-4/6 p-5 absolute left-28"
                   style={{ top: "60%" }}
                 >
                   <h3 className="text-slate-500 text-2xl font-medium">Title</h3>
@@ -492,6 +493,51 @@ export default function Body() {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+        <div id="contactMe" className="mt-8">
+          <p className="text-3xl mt-8 text-slate-500 w-4/5 mx-auto mb-4">
+            Contact Me
+          </p>
+          <div className="w-4/5 mx-auto h-2 bg-amber-400 rounded-full">
+            <div className="w-3/4 h-2 bg-indigo-500 rounded-full "></div>
+          </div>
+          <div className="flex justify-center items-center gap-10 w-11/12 mx-auto height">
+            <div className="contact-box w-80 m-0 sm:hidden ssm:hidden md:block lg:block">
+              <img src={contact} className="w-64 object-cover" />
+            </div>
+            <div className="">
+              <form
+                className="flex flex-col gap-5 "
+                action="#"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                <input
+                  type="text"
+                  value={`To : ${"wynehtetuang.gmail.com"}`}
+                  disabled
+                  className="input-box w-11/12 h-10 text-slate-500 px-3"
+                />
+                <input
+                  placeholder="Subject*"
+                  type="text"
+                  className="input-box w-11/12 h-10 text-slate-500 px-3"
+                />
+                <textarea
+                  placeholder="Message*"
+                  className="input-box text-slate-500 px-3 pt-2 w-11/12 h-32"
+                  cols="10"
+                  rows="10"
+                ></textarea>
+                <input
+                  type="submit"
+                  className="button mx-auto"
+                  value={"Submit"}
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
