@@ -363,9 +363,9 @@ export default function Body() {
             </div>
           </div>
           <div className="ssm:block sm:block md:block lg:hidden">
-            <div className="flex w-1/3 mx-auto justify-between my-10">
+            <div className="flex w-11/12 mx-auto justify-between my-10">
               <div
-                className="button w-36"
+                className="button w-32"
                 onClick={() => {
                   setCheckExp(!checkExp);
                 }}
@@ -373,7 +373,7 @@ export default function Body() {
                 Experience
               </div>
               <div
-                className="button w-36"
+                className="button w-32"
                 onClick={() => {
                   setCheckExp(!checkExp);
                 }}
