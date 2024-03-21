@@ -80,8 +80,11 @@
     5px 5px 10px rgba(0, 0, 0, 0.288);
 }
 .contact-box {
-  box-shadow: -5px -5px 18px rgba(157, 169, 149, 0.2),
-    5px 5px 8px rgba(56, 58, 56, 0.2);
+  /* box-shadow: -5px -5px 18px rgba(157, 169, 149, 0.2),
+    5px 5px 8px rgba(56, 58, 56, 0.2); */
+  border-radius: 18px;
+  background: #232732;
+  box-shadow: inset -6px -6px 6px #15171e, inset 6px 6px 6px #313747;
 }
 .input-box {
   background-color: #232732;
@@ -90,23 +93,22 @@
   border-radius: 5px;
   outline: none;
   resize: both;
+  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
 .height {
-  height: 70vh;
+  height: 400px;
 }
 @media only screen and (max-width: 650px) {
   .swiper {
     width: 350px;
   }
+}
+/* @media only screen and (max-width: 2000px) {
   .height {
     height: 30vh;
   }
-}
-@media only screen and (min-width: 2000px) {
-  .height {
-    height: 20vh;
-  }
-}
+} */
 
 @keyframes rotate {
   from {
